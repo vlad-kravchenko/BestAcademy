@@ -1,0 +1,16 @@
+﻿<Window x:Class="BestAcademy.EditDialogs.GroupAddEditDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BestAcademy.EditDialogs"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Редактировать группу" Height="120" Width="250">
+    <StackPanel>
+        <TextBlock Text="Название:" Margin="5"/>
+        <TextBox x:Name="GroupNameTb" Margin="5"/>
+        <Button Content="OK" Name="OK" Click="OK_Click" Margin="5"/>
+    </StackPanel>
+</Window>

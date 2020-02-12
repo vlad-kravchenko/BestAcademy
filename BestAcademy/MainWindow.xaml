@@ -1,0 +1,40 @@
+﻿<Window x:Class="BestAcademy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BestAcademy.Controls"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Title="BestAcademy" Height="800" Width="420">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Height="25" VerticalAlignment="Top" Grid.Row="0">
+            <MenuItem Header="Главная">
+                <MenuItem Header="Нагрузка" Name="Load" Click="Load_Click"></MenuItem>
+                <MenuItem Header="Расписание" Name="Schedule" Click="Schedule_Click"></MenuItem>
+                <Separator />
+                <MenuItem Header="Выход" Name="Exit" Click="Exit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Редактировать">
+                <MenuItem Header="Преподаватели" Name="Teachers" Click="Teachers_Click"></MenuItem>
+                <MenuItem Header="Дисциплины" Name="Subjects" Click="Subjects_Click"></MenuItem>
+                <MenuItem Header="Группы" Name="Groups" Click="Groups_Click"></MenuItem>
+                <MenuItem Header="График" Name="Lessons" Click="Lessons_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Отчёты">
+                <MenuItem Header="Нагрузка на преподавателя" Name="TeacherLoad" Click="TeacherLoad_Click"></MenuItem>
+                <MenuItem Header="Конфликты" Name="Conflicts" Click="Conflicts_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Обновить" Name="Refresh" Click="Refresh_Click"></MenuItem>
+        </Menu>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" >
+            <ItemsControl Name="lbToday"></ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Window>
